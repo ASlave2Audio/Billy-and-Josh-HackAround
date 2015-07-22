@@ -1,0 +1,16 @@
+﻿<!--<input type="hidden" data-bind="value: ID" />-->
+
+<div data-bind="visible: !editMode()">
+    <b>First Name: </b><span data-bind="text: firstName"></span><br />
+    <b>Last Name: </b><span data-bind="text: lastName"></span><br />
+    <button data-bind="click: Edit">Edit</button>&#160;
+    <button data-bind="click: Delete">Delete</button>
+</div>
+
+<div data-bind="visible: editMode()">
+    <input type="hidden" data-bind="value: ID" />
+    <b>First Name: </b><input type="text" data-bind="value: firstName"><br /><br />
+    <b>Last Name: </b><input type="text" data-bind="value: lastName"><br /><br />
+    <button data-bind="click: Save">Save</button>
+    <button data-bind="click: Cancel">Cancel</button>
+</div>

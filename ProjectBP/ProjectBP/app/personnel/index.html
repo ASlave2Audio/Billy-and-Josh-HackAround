@@ -1,0 +1,14 @@
+﻿<br />
+<div>
+    <p>
+        <b>First Name:</b><input type="text" data-bind="value: firstName" />
+    </p>
+    <p>
+        <b>Last Name:</b><input type="text" data-bind="value: lastName" />
+    </p>
+    <button data-bind="click: Submit">Submit</button><br />
+</div>
+
+<div data-bind="foreach: people">
+    <a data-bind="text: FirstName + ' ' + LastName, attr: { href: '#personnel/person/' + ID}"></a><br/>
+</div>
